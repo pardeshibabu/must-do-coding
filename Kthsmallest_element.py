@@ -19,8 +19,8 @@ def build_heap(arr, n):
         heapify(arr, n, i)
 
 def heapSort(arr, n, k):
-    build_heap(arr, n+1)
-    for i in range(n, -1, -1):
+    build_heap(arr, n)
+    for i in range(n-1, -1, -1):
         if i == k-1: return arr[0]
         arr[i], arr[0] = arr[0], arr[i]
         heapify(arr, i, 0)
